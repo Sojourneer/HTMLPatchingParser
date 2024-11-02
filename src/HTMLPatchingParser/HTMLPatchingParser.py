@@ -14,22 +14,20 @@ class HTMLPatchingParser(HTMLParser):
         for i in range(0,len(lines)):
             self.lineOffsets.append(offset)
             offset += len(lines[i]) + 1
-        print(self.lineOffsets)
         super().feed(text)
 
-    def line_pos_to_offset(self, line, pos):
-        return self.lineOffsets[line-1] + pos - 1
+    def getOffset(self):
+        (line,pos) = self.getpos()
+        return self.lineOffsets[line-1] + pos
 
     def addChange(self,change):
         self.changes.appendleft(change)
 
     def applyChanges(self):
-        print(self.changes)
         t = self.text
         for x in list(self.changes):
-            print(x)
             if x["action"] == "insert":
-                atOffset = self.line_pos_to_offset(x["line"],x["pos"])
+                atOffset = x["at"]
                 t = t[0:atOffset] + x["text"] + t[atOffset:]
             if x["action"] == "replace":
                 p1 = x["from"]
