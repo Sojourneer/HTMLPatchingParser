@@ -10,3 +10,6 @@ Modifications are queued from the HTMLParser tag handlers by calling addChange()
 These changes can then be applied in reverse order by applyChanges() to the raw text to obtain the desired modified raw text.
 
 Example(s) are provided in the examples/ directory.
+
+# Note
+A required minor change to return the position of the attributes is included in this copy of HTMLParser.
