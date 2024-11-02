@@ -1,7 +1,7 @@
 [Alpha status. Not yet packaged]
 
 # Purpose
-Support programmatic modification of HTML files while preserving formatting, which is handy if your HTML files are under source control.
+Python library to support programmatic modification of HTML files while preserving formatting, which is handy if your HTML files are under source control.
 
 # Overview
 This library leverages the SAX-style streaming HTMLParser to parse the HTML, and string operations on the underlying raw text to modify it.
