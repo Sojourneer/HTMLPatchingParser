@@ -6,7 +6,7 @@ Support programmatic modification of HTML files while preserving formatting, whi
 # Overview
 This library leverages the SAX-style streaming HTMLParser to parse the HTML, and string operations on the underlying raw text to modify it.
 
-An API for specifying string insertion or replacement operations that can be called from the HTMLParser tag handlers.
-These changes can then be applied in reverse order to the raw text to obtain the desired modifications.
+Modifications are queued from the HTMLParser tag handlers by calling addChange() with a string insertion or replacement operation.
+These changes can then be applied in reverse order by applyChanges() to the raw text to obtain the desired modified raw text.
 
-Examples are provided in the examples/ directory.
+Example(s) are provided in the examples/ directory.
