@@ -1,0 +1,18 @@
+[project]
+name = "HTMLPatchingParser"
+version = "0.0.1"
+authors = [
+  { name="David Hawley", email="davidhawley57@gmail.com" },
+]
+description = "Patching functionality to HTMLParser"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sojourneer/HTMLPatchingParser"
+Issues = "https://github.com/Sojourneer/HTMLPatchingParser/issues"
